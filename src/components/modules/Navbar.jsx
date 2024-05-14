@@ -1,17 +1,26 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import Link from 'next/link';
 import { FaUser , FaBars , FaTimes  } from "react-icons/fa";
+import { usePathname } from 'next/navigation';
 
 
 function Navbar() {
     const [showMenu , setShowMenu] = useState(false);
+    const [routeMenu , setRouteMenu] =useState("/");
+    const routePath = usePathname();
 
     // show-menu 
     const handlerShowMenu = ()=>{
         setShowMenu(!showMenu)
     }
+
+    // change route add style
+    useEffect(()=>{
+        const pathName = routeMenu
+        setRouteMenu(pathName)
+    },[routePath])
   return (
     <>
         <section className={`${style.navBar} ${"d-none d-md-flex"}`}>
@@ -19,16 +28,16 @@ function Navbar() {
                     <div className={style.navbar_wrapper}>
                             <ul className={style.navbar_menu}>
                                 <li className={style.navbar_item}>
-                                    <Link href='' className={style.navbar_item_link}>خانه</Link>
+                                    <Link href='/' className={routeMenu === '/' ? style.navbar_item_link_active : style.navbar_item_link}>خانه</Link>
                                 </li>
                                 <li className={style.navbar_item}>
-                                    <Link href='' className={style.navbar_item_link}>قوانین</Link>
+                                    <Link href='/Roles' className={routeMenu === '/Roles' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
                                 </li>
                                 <li className={style.navbar_item}>
-                                    <Link href='' className={style.navbar_item_link}>تماس باما</Link>
+                                    <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس باما</Link>
                                 </li>
                                 <li className={style.navbar_item}>
-                                    <Link href='' className={style.navbar_item_link}>پرسش ها</Link>
+                                    <Link href='/Question' className={routeMenu === '/Question' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                 </li>
                             </ul>
 
@@ -56,16 +65,16 @@ function Navbar() {
                            <div className={showMenu ? style.navbarRes_bg_active :style.navbarRes_bg}>
                            <ul className={style.navbarRes_menu}>
                                <li className={style.navbarRes_item}>
-                                   <Link href='' className={style.navbarRes_item_link}>خانه</Link>
+                                   <Link href='/' className={routeMenu === '/' ? style.navbar_item_link_active : style.navbar_item_link}>خانه</Link>
                                </li>
                                <li className={style.navbarRes_item}>
-                                   <Link href='' className={style.navbarRes_item_link}>قوانین</Link>
+                                   <Link href='/Roles' className={routeMenu === '/Roles' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
                                </li>
                                <li className={style.navbarRes_item}>
-                                   <Link href='' className={style.navbarRes_item_link}>تماس با ما</Link>
+                                   <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس با ما</Link>
                                </li>
                                <li className={style.navbarRes_item}>
-                                   <Link href='' className={style.navbarRes_item_link}>پرسش ها</Link>
+                                   <Link href='/Question' className={routeMenu === '/Question' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                </li>
                            </ul>
                        </div>
