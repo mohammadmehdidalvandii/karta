@@ -44,5 +44,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: danaRegular !important;
+  color: var(--textColor);
+  background-color: var(--primary);
 }
 /* <<<< body >>>> */
