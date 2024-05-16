@@ -1,0 +1,27 @@
+.card{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--secondary);
+    border-radius: 0.6rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+.card:hover{
+    background-color: var(--success);
+}
+.card_img{
+    width: 100%;
+    border-radius: 0.3rem;
+}
+.card_title{
+    display: block;
+    margin-top: 2rem;
+    font-family: var(--font-bold);
+    font-size: 1.4rem;
+    color: var(--whiteColor);
+}
+.card_title:last-child{
+    margin-top: 1rem;
+}
