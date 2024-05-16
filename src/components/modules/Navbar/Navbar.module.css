@@ -3,6 +3,29 @@
     width: 100%;
     margin: 0.7rem 0;
 }
+.nav_fixed{
+    display: block;
+    width: 100%;
+   padding: 0.7rem 0;
+    position: fixed;
+    box-shadow: 0 5px 8px var(--primary);
+    opacity: 0.95;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--primary);
+    z-index: 9999;
+    transition:  background-color 0.4s ease-in-out;
+    animation: fadeInDownBig 0.4s ease-in-out ;
+}
+@keyframes fadeInDownBig {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      transform: none;
+    }
+  }
 .navbar_wrapper{
     display: flex;
     justify-content: space-between;

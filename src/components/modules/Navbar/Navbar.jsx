@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 function Navbar() {
     const [showMenu , setShowMenu] = useState(false);
     const [routeMenu , setRouteMenu] =useState("/");
+    const [navToTop , setNavToTop] = useState(false)
     const routePath = usePathname();
 
     // show-menu 
@@ -21,9 +22,25 @@ function Navbar() {
         const pathName = routeMenu
         setRouteMenu(pathName)
     },[routePath])
+
+
+    // navbar scroll fixed to top
+    useEffect(()=>{
+        const fixedNavbarToTop = ()=>{
+            const currentScroll = window.scrollY;
+            if(currentScroll > 120){
+                setNavToTop(true)
+            }else{
+                setNavToTop(false)
+            }
+        }
+        window.addEventListener("scroll", fixedNavbarToTop)
+
+        return ()=> window.removeEventListener("scroll", fixedNavbarToTop)
+    },[])
   return (
     <>
-        <section className={`${style.navBar} ${"d-none d-md-flex"}`}>
+        <section className={`${navToTop ? style.nav_fixed : style.navBar} ${"d-none d-md-flex"}`}>
                 <div className="container">
                     <div className={style.navbar_wrapper}>
                             <ul className={style.navbar_menu}>
@@ -49,7 +66,7 @@ function Navbar() {
                 </div>
         </section>
 
-        <section className={`${style.navbarRes} ${"d-block d-md-none"}`}>
+        <section className={`${navToTop ? style.nav_fixed : style.navbarRes} ${"d-block d-md-none"}`}>
             <div className="container">
                 <div className={style.navbarRes_wrapper}>
                     {showMenu ? (
