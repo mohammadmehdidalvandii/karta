@@ -1,0 +1,104 @@
+.contactUs{
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.contactUs_wrapper{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.contactUs_form{
+    display: block;
+    width: 100%;
+}
+.form_box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.form_box_text{
+    margin-left: 2rem;
+}
+.form_box_input{
+    width: 100%;
+    height: 2.5rem;
+    outline: none;
+    border: 1px solid var(--grayColor);
+    background-color: unset;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--textColor);
+    padding-right: 0.5rem;
+}
+.form_box_textarea{
+    width: 100%;
+    height: 7rem;
+    outline: none;
+    border: 1px solid var(--grayColor);
+    background-color: unset;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--textColor);
+    padding-right: 0.5rem;
+}
+.contactUs_form_submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--textHover);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    color: var(--whiteColor);
+    transition: all 0.4s ease-in-out;
+}
+.contactUs_form_submit:hover{
+    background-color: var(--textColor);
+    color: var(--textHover);
+}
+
+.contactUs_title{
+    display: block;
+    text-align: center;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contactUs_items{
+    display: block;
+}
+.contactUs_item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contactUs_item_icon{
+    font-size: 1.1rem;
+    margin-left: 0.3rem;
+}
+.contactUs_item_text{
+    margin-right: 0.2rem;
+}
+.contactUs_item_link{
+    display: block;
+    text-decoration: none;
+    color: var(--textColor);
+    transition: all 0.4s ease-in-out;
+    margin-right: 0.2rem;
+}
+.contactUs_item_link:hover{
+    color: var(--textHover);
+}
