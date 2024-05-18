@@ -1,0 +1,36 @@
+.rule{
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+}
+.rule_content{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
+.rule_title{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.5rem;
+    color: var(--textHover);
+}
+.rule_desc{
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1.5rem 0;
+}
+
+.rule_items{
+    display: block;
+    margin-top: 1rem;
+}
+.rule_item{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}

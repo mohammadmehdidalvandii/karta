@@ -11,7 +11,7 @@ function Navbar() {
     const [routeMenu , setRouteMenu] =useState("/");
     const [navToTop , setNavToTop] = useState(false)
     const routePath = usePathname();
-console.log(routeMenu);
+
     // show-menu 
     const handlerShowMenu = ()=>{
         setShowMenu(!showMenu)
