@@ -11,7 +11,7 @@ function Navbar() {
     const [routeMenu , setRouteMenu] =useState("/");
     const [navToTop , setNavToTop] = useState(false)
     const routePath = usePathname();
-
+console.log(routeMenu);
     // show-menu 
     const handlerShowMenu = ()=>{
         setShowMenu(!showMenu)
@@ -19,7 +19,7 @@ function Navbar() {
 
     // change route add style
     useEffect(()=>{
-        const pathName = routeMenu
+        const pathName = routePath
         setRouteMenu(pathName)
     },[routePath])
 
