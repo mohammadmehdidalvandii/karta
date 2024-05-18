@@ -48,7 +48,7 @@ function Navbar() {
                                     <Link href='/' className={routeMenu === '/' ? style.navbar_item_link_active : style.navbar_item_link}>خانه</Link>
                                 </li>
                                 <li className={style.navbar_item}>
-                                    <Link href='/Roles' className={routeMenu === '/Roles' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
+                                    <Link href='/Rules' className={routeMenu === '/Rules' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
                                 </li>
                                 <li className={style.navbar_item}>
                                     <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس باما</Link>
@@ -85,7 +85,7 @@ function Navbar() {
                                    <Link href='/' className={routeMenu === '/' ? style.navbar_item_link_active : style.navbar_item_link}>خانه</Link>
                                </li>
                                <li className={style.navbarRes_item}>
-                                   <Link href='/Roles' className={routeMenu === '/Roles' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
+                                   <Link href='/Rules' className={routeMenu === '/Rules' ? style.navbar_item_link_active : style.navbar_item_link}>قوانین</Link>
                                </li>
                                <li className={style.navbarRes_item}>
                                    <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس با ما</Link>
