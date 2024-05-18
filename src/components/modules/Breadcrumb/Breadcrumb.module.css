@@ -1,0 +1,35 @@
+.breadcrumb{
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+}
+.breadcrumb_content{
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+.breadcrumb_title{
+    display: block;
+    font-family: var(--font-black);
+    font-size: 1.1rem;
+}
+.breadcrumb_icon{
+    display: block;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.breadcrumb_link{
+    display: block;
+    text-decoration: none;
+    font-family: var(--font-black);
+    font-size: 1.1rem;
+    color: var(--textColor);
+    transition: all 0.4s ease-in-out;
+}
+
+.breadcrumb_link:hover{
+    color: var(--textHover);
+}
