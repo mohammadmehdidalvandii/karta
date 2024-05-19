@@ -54,7 +54,7 @@ function Navbar() {
                                     <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس باما</Link>
                                 </li>
                                 <li className={style.navbar_item}>
-                                    <Link href='/Question' className={routeMenu === '/Question' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
+                                    <Link href='/Questions' className={routeMenu === '/Questions' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                 </li>
                             </ul>
 
@@ -91,7 +91,7 @@ function Navbar() {
                                    <Link href='/Contact' className={routeMenu === '/Contact' ? style.navbar_item_link_active : style.navbar_item_link}>تماس با ما</Link>
                                </li>
                                <li className={style.navbarRes_item}>
-                                   <Link href='/Question' className={routeMenu === '/Question' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
+                                   <Link href='/Questions' className={routeMenu === '/Questions' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                </li>
                            </ul>
                        </div>
