@@ -1,0 +1,10 @@
+.login{
+    display: block;
+    max-width: 600px;
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
