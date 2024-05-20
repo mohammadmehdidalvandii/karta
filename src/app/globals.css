@@ -49,3 +49,68 @@ body{
   background-color: var(--primary) !important;
 }
 /* <<<< body >>>> */
+
+
+/* loginRegister  */
+.loginRegister_title_text{
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.loginRegister_title{
+  display: block;
+  font-family: var(--font-bold);
+  font-size: 1.8rem;
+}
+.loginRegister_text{
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--whiteColor);
+}
+.formBox{
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.formBox_text{
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--whiteColor);
+  margin-bottom: 0.5rem;
+}
+.formBox_input{
+  display: block;
+  width: 100%;
+  height: 3rem;
+  background-color: unset;
+  outline: none;
+  border: 1px solid var(--whiteColor);
+  border-radius: 0.4rem;
+  padding-right: 0.4rem;
+  font-family: var(--font-bold);
+  font-size: 0.9rem;
+  color: var(--whiteColor);
+}
+.formSubmit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 3rem;
+  font-family: var(--font-bold);
+  font-size: 1.1rem;
+  color: var(--textColor);
+  background-color: var(--textHover);
+  border-radius: 0.5rem;
+  transition: all 0.4s ease-in-out;
+}
+.formSubmit:hover{
+  color: var(--textHover);
+  background-color: var(--textColor);
+}
+/* loginRegister  */

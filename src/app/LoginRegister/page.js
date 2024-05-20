@@ -1,0 +1,18 @@
+import Breadcrumb from '@/components/modules/Breadcrumb/Breadcrumb'
+import Footer from '@/components/modules/Footer/Footer'
+import Navbar from '@/components/modules/Navbar/Navbar'
+import LoginRegister from '@/components/template/LoginRegister/LoginRegister'
+import React from 'react'
+
+function page() {
+  return (
+    <>
+    <Navbar/>
+    <Breadcrumb title='ثبت نام یا ورود'/>
+    <LoginRegister/>
+    <Footer/>
+    </>
+  )
+}
+
+export default page

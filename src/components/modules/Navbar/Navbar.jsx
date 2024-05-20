@@ -58,7 +58,7 @@ function Navbar() {
                                 </li>
                             </ul>
 
-                            <Link href='' className={style.navbar_loginRegister}>
+                            <Link href='/LoginRegister' className={style.navbar_loginRegister}>
                                 <span className={style.navbar_loginRegister_icon}><FaUser/></span>
                                 <span className={style.navbar_loginRegister_text}>ثبت نام / ورود</span>
                             </Link>
@@ -96,7 +96,7 @@ function Navbar() {
                            </ul>
                        </div>
                  
-                    <Link href='' className={style.navbar_loginRegister}>
+                    <Link href='/LoginRegister' className={style.navbar_loginRegister}>
                                 <span className={style.navbar_loginRegister_icon}><FaUser/></span>
                                 <span className={style.navbar_loginRegister_text}>ثبت نام / ورود</span>
                             </Link>
