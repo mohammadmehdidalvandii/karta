@@ -14,7 +14,7 @@ function Footer() {
                     <div className="col-12">
                         <ul className={style.footer_menu}>
                             <li className={style.footer_menu_item}>
-                                <Link href='' className={style.footer_menu_link}>همکاری با ما</Link>
+                                <Link href='/Assist' className={style.footer_menu_link}>همکاری با ما</Link>
                             </li>
                             <li className={style.footer_menu_item}>
                                 <Link href='' className={style.footer_menu_link}>گرفتن نمایندگی</Link>
