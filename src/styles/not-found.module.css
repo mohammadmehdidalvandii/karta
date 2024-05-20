@@ -1,0 +1,36 @@
+.notFound{
+   display: block;
+   
+    width: 100%;
+}
+.notFound_content{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 10rem auto;
+    background-color: var(--secondary);
+    border-radius: 0.6rem;
+    padding: 1.5rem 1rem;
+}
+
+.notFound_content_title{
+    display: block;
+    font-family: var(--font-black);
+    font-size: 2.5rem;
+}
+.notFound_content_text{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+.notFound_content_link{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1rem;
+    color: var(--textColor);
+    transition: all 0.4s ease-in-out;
+}
+.notFound_content_link:hover{
+    color: var(--textHover);
+}
