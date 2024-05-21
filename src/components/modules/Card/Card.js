@@ -8,6 +8,7 @@ function Card() {
     <img src="/images/itunes.jpg" alt="product img" className={style.card_img} />
     <h6 className={style.card_title}>گیفت کارت آیتونز</h6>
     <h6 className={style.card_title}>Itunes</h6>
+    <h6 className={style.card_title}>price</h6>
 </Link>
   )
 }
