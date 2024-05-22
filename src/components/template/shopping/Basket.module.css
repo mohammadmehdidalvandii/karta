@@ -1,0 +1,105 @@
+.basket{
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+}
+.basket_wrapper{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.basket_form{
+    display: block;
+    width: 100%;
+}
+.basket_formBox{
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.basket_formBox_text{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.basket_formBox_input{
+    display: block;
+    width: 100%;
+    height: 2.2rem;
+    margin-top: 0.7rem;
+    background-color: unset;
+    outline: none;
+    border: 1px solid var(--grayColor);
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--textColor);
+    padding-right: 0.5rem;
+}
+.basket_text_alert{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-black);
+    font-size: 1.5rem;
+    color: var(--textHover);
+}
+
+.basket_items{
+    display: block;
+    width: 100%;
+}
+.basket_item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.basket_item_img{   
+    margin: 0 auto;
+    max-width: 70px;
+    border-radius: 1rem;
+}
+
+.basket_item_title{
+    display: inline-block;
+    text-align: center;
+    margin-left: 0.3rem;
+    width: 30%;
+    padding: 0.8rem;
+    background-color: var(--success);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.basket_item_text{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--success);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.basket_pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.6rem;
+    width: 120px;
+    height: 2.5rem;
+    background-color: var(--textHover);
+    color: var(--textColor);
+    transition: all 0.4s ease-in-out;
+}
+.basket_pay:hover{
+    background-color: var(--textColor);
+    color: var(--textHover);
+}
