@@ -1,0 +1,24 @@
+.pHeader{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+}
+.pHeader_text{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+.pHeader_link{
+    display: block;
+    text-decoration: none;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: all 0.4s ease-in-out;
+}
+.pHeader_link:hover{
+    color: var(--textColor);
+}
