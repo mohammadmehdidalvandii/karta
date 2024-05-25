@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import style from "../../styles/Admin.module.css";
+import Dashboard from "@/components/template/admin/Dashboard";
 
 function page() {
     const [menu , setMenu]= useState('dashboard')
@@ -38,7 +39,7 @@ function page() {
             </div>
           </div>
           <div className="col-lg-9 col-md-9 col-sm1-12">
-                {menu === 'dashboard' && (<h1>dashboard</h1>)}
+                {menu === 'dashboard' && (<Dashboard/>)}
                 {menu === 'user_list' && (<h1>user_list</h1>)}
                 {menu === 'product' && (<h1>product</h1>)}
                 {menu === 'contact' && (<h1>contact</h1>)}
