@@ -1,0 +1,57 @@
+.admin{
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+}
+.admin_wrapper{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    padding-block: 1rem ;
+    margin-bottom: 1rem;
+}
+.menu_items{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.menu_item{
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 150px;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-family: var(--font-black);
+    font-size: 1.3rem;
+    color: var(--textColor);
+    transition: all 0.4s ease-in-out;
+}
+.menu_btn_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 150px;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-family: var(--font-black);
+    font-size: 1.3rem;
+    color: var(--textHover);
+    transition: all 0.4s ease-in-out;
+}
+
+.menu_btn:hover{
+    color: var(--textHover);
+}

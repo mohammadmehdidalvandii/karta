@@ -50,6 +50,16 @@ body{
 }
 /* <<<< body >>>> */
 
+/* <<<< Containers >>>> */
+.containers{
+  max-width: 95rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* <<<< Containers >>>> */
+
 
 /* loginRegister  */
 .loginRegister_title_text{
