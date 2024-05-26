@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import style from "../../styles/Admin.module.css";
 import Dashboard from "@/components/template/admin/Dashboard";
 import UserList from "@/components/template/admin/UserList";
+import Products from "@/components/template/admin/Products";
 
 function page() {
     const [menu , setMenu]= useState('dashboard')
@@ -42,7 +43,7 @@ function page() {
           <div className="col-lg-9 col-md-9 col-sm1-12">
                 {menu === 'dashboard' && (<Dashboard/>)}
                 {menu === 'user_list' && (<UserList/>)}
-                {menu === 'product' && (<h1>product</h1>)}
+                {menu === 'product' && (<Products/>)}
                 {menu === 'contact' && (<h1>contact</h1>)}
                 {menu === 'order' && (<h1>order</h1>)}
           </div>
