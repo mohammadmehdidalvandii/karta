@@ -5,6 +5,7 @@ import Dashboard from "@/components/template/admin/Dashboard";
 import UserList from "@/components/template/admin/UserList";
 import Products from "@/components/template/admin/Products";
 import Contact from "@/components/template/admin/Contact";
+import Order from "@/components/template/admin/Order";
 
 function page() {
     const [menu , setMenu]= useState('dashboard')
@@ -46,7 +47,7 @@ function page() {
                 {menu === 'user_list' && (<UserList/>)}
                 {menu === 'product' && (<Products/>)}
                 {menu === 'contact' && (<Contact/>)}
-                {menu === 'order' && (<h1>order</h1>)}
+                {menu === 'order' && (<Order/>)}
           </div>
         </div>
       </div>
