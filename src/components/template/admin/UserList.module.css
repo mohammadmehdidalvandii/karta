@@ -1,0 +1,64 @@
+.userList{
+    display: block;
+    width: 100%;
+}
+.userList_Wrapper{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+.userList_table{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--grayColor);
+}
+.userList_thead{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.userList_th{
+    display: block;
+    width: 100%;
+font-size: 1.1rem;
+font-weight: 600;
+color: var(--whiteColor);
+}
+
+.userList_tbody{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--grayColor);
+    padding: 0.5rem;
+}
+.userList_tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid var(--grayColor);
+    margin-bottom: 0.6rem;
+}
+.userList_tr th{
+    display: block;
+    width: 100%;
+font-size: 0.9rem;
+font-weight: 500;
+}
+
+.userList_btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+.userList_btn{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--textHover);
+    transition: all 0.4s ease-in-out;
+}
+.userList_btn:hover{
+    color: var(--textColor);
+}
