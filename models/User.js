@@ -22,7 +22,7 @@ const schema = new mongoose.Schema({
         default:"USER",
     },
 
-    // refreshToken: String,
+    refreshToken: String,
 })
 
 const model = mongoose.models.User || mongoose.model("User" , schema);
