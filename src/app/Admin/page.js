@@ -6,12 +6,41 @@ import UserList from "@/components/template/admin/UserList";
 import Products from "@/components/template/admin/Products";
 import Contact from "@/components/template/admin/Contact";
 import Order from "@/components/template/admin/Order";
+import swal from "sweetalert";
+import { useRouter } from "next/navigation";
 
 function page() {
+  const router = useRouter();
     const [menu , setMenu]= useState('dashboard')
 
     const handlerMenu = (MenuID)=>{
         setMenu(MenuID)
+    }
+
+    const logoutHandler = ()=>{
+      swal(
+        {
+          title : "آیا از خروج اطمینان دارید؟",
+          icon:"warning",
+          buttons:["نه","آره",]
+        }
+      ).then(async(result)=>{
+        if(result){
+          const res = await fetch("/api/auth/signout",{
+            method: "POST",
+          });
+          if(res.status === 200){
+            swal({
+              title:"با موفقیت از اکاننت خارج شدید",
+              icon:"success",
+              buttons:"فهمیدم"
+            }).then((result)=>{
+              router.replace("/")
+              router.refresh()
+            })
+          }
+        }
+      })
     }
 
   return (
@@ -37,7 +66,7 @@ function page() {
                   <button className={menu === 'order' ? style.menu_btn_active : style.menu_btn} onClick={()=>handlerMenu('order')} >سفارشات</button>
                 </li>
                 <li className={style.menu_item}>
-                  <button className={style.menu_btn}>خروج</button>
+                  <button className={style.menu_btn} onClick={logoutHandler}>خروج</button>
                 </li>
               </ul>
             </div>
