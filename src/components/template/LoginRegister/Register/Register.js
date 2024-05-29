@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import style from './Register.module.css';
 import { showSwal } from '@/utils/helpers';
 import { validationEmail, validationPassword, validationPhone } from '@/utils/auth';
+import swal from 'sweetalert';
+import { useRouter } from 'next/navigation';
 
 function Register() {
+    const router = useRouter();
     const [email , setEmail] = useState("");
     const [name , setName] = useState("");
     const [phone , setPhone] = useState("");
@@ -49,7 +52,13 @@ function Register() {
         });
 
         if(res.status === 201){
-            showSwal("ثبت نام با موفقیت انجام شد","success","ورود به پنل کاربری")
+            swal({
+                title:"ثبت نام با موفقیت انجام شد",
+                icon:"success",
+                buttons:"ورود به پنل کاربری"
+            }).then(()=>{
+                router.replace('Admin')
+            })
         } else if(res.status === 422){
             showSwal("کاربر با این اطلاعات از قبل وجود دارد","error","تلاش مجدد")
         }
