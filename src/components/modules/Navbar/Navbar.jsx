@@ -6,7 +6,7 @@ import { FaUser , FaBars , FaTimes  } from "react-icons/fa";
 import { usePathname } from 'next/navigation';
 
 
-function Navbar() {
+function Navbar({isLogin}) {
     const [showMenu , setShowMenu] = useState(false);
     const [routeMenu , setRouteMenu] =useState("/");
     const [navToTop , setNavToTop] = useState(false)
@@ -57,11 +57,19 @@ function Navbar() {
                                     <Link href='/Questions' className={routeMenu === '/Questions' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                 </li>
                             </ul>
-
-                            <Link href='/LoginRegister' className={style.navbar_loginRegister}>
+                            { !isLogin ?(
+                                   <Link href='/LoginRegister' className={style.navbar_loginRegister}>
                                 <span className={style.navbar_loginRegister_icon}><FaUser/></span>
                                 <span className={style.navbar_loginRegister_text}>ثبت نام / ورود</span>
                             </Link>
+                            ):(
+                                <Link href='/Admin' className={style.navbar_loginRegister}>
+                                <span className={style.navbar_loginRegister_icon}><FaUser/></span>
+                                <span className={style.navbar_loginRegister_text}>حساب من</span>
+                            </Link>
+                            )}
+
+                         
                     </div>
                 </div>
         </section>

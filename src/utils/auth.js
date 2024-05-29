@@ -1,9 +1,7 @@
 "use server"
 import { hash , compare } from "bcryptjs";
 import { sign , verify } from "jsonwebtoken";
-import { cookies } from "next/headers";
-import UserModel from '@/models/User';
-import connectToDB from "@/config/db";
+
 
 const hashPassword = async (password) => {
     const hashedPassword = await hash(password , 12);
@@ -54,18 +52,6 @@ const validationPassword  = (password) => {
     return pattern.test(password);
 }
 
-const authUser = async () => {
-    connectToDB();
-    const token =  cookies().get("token");
-    let user = null ; 
-    if(token) {
-        const tokenPayload = verifyAccessToken(token.value);
-        if(tokenPayload){
-            user = await UserModel.findOne({email:tokenPayload.email})
-        }
-    }
-    return user ; 
-};
 
 
 export {
@@ -77,5 +63,4 @@ generateRefreshToken,
 validationEmail,
 validationPhone,
 validationPassword,
-authUser,   
 }
