@@ -13,15 +13,15 @@ export async function POST (req){
         const body = await req.json();
         const {email , password} = body;
 
-        // const isValidEmail = validationEmail(email);
-        // const isValidPassword = validationPassword(password);
+        const isValidEmail = validationEmail(email);
+        const isValidPassword = validationPassword(password);
 
-        // if(!isValidEmail || !isValidPassword){
-        //     return Response.json(
-        //         {message : "Email or Password is Not Valid"},
-        //         {status: 419},
-        //     );
-        // }
+        if(!isValidEmail || isValidPassword ){
+            return Response.json(
+                {message : "Email or Password is Not Valid"},
+                {status: 419},
+            );
+        }
 
         const user = await UserModel.findOne({email});
 
@@ -58,7 +58,7 @@ export async function POST (req){
             {
                 status: 200,
                 headers:{
-                    "Set-Cookie" : `token=${accessToken};path='/;httpOnly=trued`,
+                    "Set-Cookie" : `token=${accessToken};path=/;httpOnly=true`,
                 }
             }
         )
