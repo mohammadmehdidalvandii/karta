@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+require('./Categories');
+
 
 const schema = new mongoose.Schema({
     name:{
@@ -16,6 +18,10 @@ const schema = new mongoose.Schema({
     category:{
         type:String,
         required: true,
+    },
+    categoriesID:{
+        type:mongoose.Types.ObjectId,
+        ref:"Categories",
     }
 });
 

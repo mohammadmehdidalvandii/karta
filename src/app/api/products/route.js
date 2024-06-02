@@ -9,12 +9,14 @@ export async function POST (req){
             name,
             price,
             category,
+            categoriesID
         } =body ;
 
         const product = await ProductModel.create({
             name,
             price,
             category,
+            categoriesID,
         })
 
         return Response.json(
