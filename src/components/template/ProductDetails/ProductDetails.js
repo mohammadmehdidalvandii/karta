@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ProductDetails.module.css';
 import Title from '@/components/modules/Title/Title';
-import Card from '@/components/modules/Card/Card';
+import ProductCard from '@/components/modules/ProductCard/ProductCard';
 
 function ProductDetails() {
   return (
@@ -14,16 +14,13 @@ function ProductDetails() {
             </div>
             <div className="row mt-5">
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <Card/>
+                    <ProductCard/>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <Card/>
+                    <ProductCard/>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <Card/>
-                </div>
-                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <Card/>
+                    <ProductCard/>
                 </div>
             </div>
         </div>

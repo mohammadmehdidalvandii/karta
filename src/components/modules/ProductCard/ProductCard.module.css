@@ -1,0 +1,32 @@
+.productCard{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 0.7rem;
+    background-color: var(--secondary);
+    padding: 1rem;
+    color: var(--textColor);
+    margin-bottom: 1rem;
+    transition: all 0.4s ease-out;
+}
+.productCard:hover{
+    color: var(--textHover);
+}
+.productCard_img{
+    width: 100%;
+    border-radius: 0.4rem;
+}
+.productCard_name{
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+}
+.productCard_price{
+    display: block;
+    text-align: center;
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
