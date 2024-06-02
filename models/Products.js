@@ -7,10 +7,6 @@ const schema = new mongoose.Schema({
         type:String,
         required: true,
     },
-   title: {
-    type:String,
-    required:true,
-    },
     price:{
         type:String,
         required:true,
@@ -19,10 +15,10 @@ const schema = new mongoose.Schema({
         type:String,
         required: true,
     },
-    categoriesID:{
+    categoriesID:  {
         type:mongoose.Types.ObjectId,
         ref:"Categories",
-    }
+    }, 
 });
 
 const model = mongoose.models.Products || mongoose.model("Products", schema);
