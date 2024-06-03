@@ -2,7 +2,7 @@ import React from 'react';
 import style from '../styles/not-found.module.css'
 import Link from 'next/link';
 
-function notFound() {
+function NotFound() {
   return (
     <section className={style.notFound}>
         <div className="container">
@@ -20,4 +20,4 @@ function notFound() {
   )
 }
 
-export default notFound
+export default NotFound

@@ -17,10 +17,10 @@ function Footer() {
                                 <Link href='/Assist' className={style.footer_menu_link}>همکاری با ما</Link>
                             </li>
                             <li className={style.footer_menu_item}>
-                                <Link href='/notFound' className={style.footer_menu_link}>گرفتن نمایندگی</Link>
+                                <Link href='/NotFound' className={style.footer_menu_link}>گرفتن نمایندگی</Link>
                             </li>
                             <li className={style.footer_menu_item}>
-                                <Link href='/notFound' className={style.footer_menu_link}>درباره فروشگاه</Link>
+                                <Link href='/NotFound' className={style.footer_menu_link}>درباره فروشگاه</Link>
                             </li>
                         </ul>
                     </div>
