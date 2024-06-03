@@ -2,16 +2,24 @@ import Breadcrumb from '@/components/modules/Breadcrumb/Breadcrumb';
 import Footer from '@/components/modules/Footer/Footer';
 import Navbar from '@/components/modules/Navbar/Navbar';
 import ProductDetails from '@/components/template/ProductDetails/ProductDetails';
+import connectToDB from '@/config/db';
 import { authUser } from '@/utils/serverHeplers';
 import React from 'react';
+import ProductModel from '@/models/Products';
 
-async function page() {
+async function page({ params }) {
   const user = await authUser();
+  const productID = params.id;
+  console.log({productID})
+  connectToDB();
+  const products = await ProductModel.find({ category: productID})
+  console.log("products=>>>" , products)
+
   return (
     <>
     <Navbar isLogin={user ? true :false}/>
     <Breadcrumb title='جزِئیات گیفت کارت'/>
-    <ProductDetails/>
+    <ProductDetails products={products}/>
     <Footer/>
     </>
   )

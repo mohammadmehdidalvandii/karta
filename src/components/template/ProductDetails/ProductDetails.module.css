@@ -3,3 +3,16 @@
     width: 100%;
     margin-top: 5rem;
 }
+
+.productDetails_empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    width: 100%;
+    padding: 3rem 0;
+    border-radius: 1rem;
+    font-family: var(--font-black);
+    font-size: 2rem;
+    color: var(--textHover);
+}

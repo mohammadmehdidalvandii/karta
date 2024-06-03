@@ -15,7 +15,7 @@ function Product({categories}) {
             <div className="row mt-5">
                     {categories.map(category=>(
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={category._id}>
-                    <Card name={category.name} title={category.title}/>
+                    <Card name={category.name} title={category.title} id={category.title}/>
                 </div>
                     )) }
             </div>
