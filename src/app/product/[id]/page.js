@@ -10,11 +10,9 @@ import ProductModel from '@/models/Products';
 async function page({ params }) {
   const user = await authUser();
   const productID = params.id;
-  console.log({productID})
+  const productType = productID.toLowerCase()
   connectToDB();
-  const products = await ProductModel.find({ category: productID})
-  console.log("products=>>>" , products)
-
+  const products = await ProductModel.find({ category: productType})
   return (
     <>
     <Navbar isLogin={user ? true :false}/>
