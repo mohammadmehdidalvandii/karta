@@ -1,10 +1,31 @@
+"use client"
 import React from 'react';
 import style from './ProductDetails.module.css';
 import Title from '@/components/modules/Title/Title';
 import ProductCard from '@/components/modules/ProductCard/ProductCard';
+import { showSwal } from '@/utils/helpers';
 
 function ProductDetails({products}) {
-    
+        const handlerAddToBasket = (product)=>{
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            console.log("cart =>" ,cart);
+
+            const isInCart = cart.some((item)=> item.id === product._id && item.name === product.name)
+            console.log("isInCart" , isInCart)
+             
+            if(isInCart){
+                showSwal("محصول در سبدخرید وجود دارد","error" , "فهمیدم")
+            } else{
+                const cartItem = {
+                   id: product._id,
+                   name:product.name,
+                   price: product.price,
+                };
+                cart.push(cartItem);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                showSwal("محصول اضافه شد به سبد خرید","success","فهمیدم")
+            }
+        }
   return (
     <section className={style.productDetails}>
         <div className="container">
@@ -19,7 +40,9 @@ function ProductDetails({products}) {
                 )}
             {products.map(product =>(
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <ProductCard name={product.name} price={product.price}/>
+                    <ProductCard name={product.name} price={product.price}
+                    addToBasket={()=> handlerAddToBasket(product)}
+                    />
                 </div>
             ))}
             </div>
