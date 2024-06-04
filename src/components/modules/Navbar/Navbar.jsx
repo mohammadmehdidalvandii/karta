@@ -60,7 +60,7 @@ function Navbar({isLogin}) {
                             </ul>
 
                             <div className={style.navbar_basket_loginRegister}>
-                            <Link href='/Basket' className={style.navbar_basket}>
+                            <Link href='/Shopping' className={style.navbar_basket}>
                                         <span className={style.navbar_basket_number}>0</span>
                                         <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
                                 </Link>
@@ -111,7 +111,7 @@ function Navbar({isLogin}) {
                        </div>
                  
                        <div className={style.navbar_basket_loginRegister}>
-                       <Link href='/Basket' className={style.navbar_basket}>
+                       <Link href='/Shopping' className={style.navbar_basket}>
                                         <span className={style.navbar_basket_number}>0</span>
                                         <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
                                 </Link>
