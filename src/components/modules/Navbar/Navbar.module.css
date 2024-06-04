@@ -56,6 +56,38 @@
 .navbar_item_link:hover{
     color: var(--textHover);
 }
+.navbar_basket_loginRegister{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar_basket{
+    display: block;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+.navbar_basket_number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--textHover);
+    border-radius: 50%;
+    color: var(--textColor);
+    position: absolute;
+    top:-0.5rem;
+    right: -0.7rem;
+}
+.navbar_basket_icon{
+    font-size: 1.5rem;
+    color: var(--textColor);
+    transition: all 0.4s ease-out;
+}
+.navbar_basket:hover .navbar_basket_icon{
+    color: var(--textHover);
+}
 .navbar_loginRegister{
     display: flex;
     align-items: center;

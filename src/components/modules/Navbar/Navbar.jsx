@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import Link from 'next/link';
 import { FaUser , FaBars , FaTimes  } from "react-icons/fa";
+import { FaBasketShopping } from "react-icons/fa6";
 import { usePathname } from 'next/navigation';
 
 
@@ -57,6 +58,12 @@ function Navbar({isLogin}) {
                                     <Link href='/Questions' className={routeMenu === '/Questions' ? style.navbar_item_link_active : style.navbar_item_link}>پرسش ها</Link>
                                 </li>
                             </ul>
+
+                            <div className={style.navbar_basket_loginRegister}>
+                            <Link href='/Basket' className={style.navbar_basket}>
+                                        <span className={style.navbar_basket_number}>0</span>
+                                        <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
+                                </Link>
                             { !isLogin ?(
                                    <Link href='/LoginRegister' className={style.navbar_loginRegister}>
                                 <span className={style.navbar_loginRegister_icon}><FaUser/></span>
@@ -68,8 +75,7 @@ function Navbar({isLogin}) {
                                 <span className={style.navbar_loginRegister_text}>حساب من</span>
                             </Link>
                             )}
-
-                         
+                            </div>
                     </div>
                 </div>
         </section>
@@ -104,10 +110,23 @@ function Navbar({isLogin}) {
                            </ul>
                        </div>
                  
-                    <Link href='/LoginRegister' className={style.navbar_loginRegister}>
+                       <div className={style.navbar_basket_loginRegister}>
+                       <Link href='/Basket' className={style.navbar_basket}>
+                                        <span className={style.navbar_basket_number}>0</span>
+                                        <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
+                                </Link>
+                            { !isLogin ?(
+                                   <Link href='/LoginRegister' className={style.navbar_loginRegister}>
                                 <span className={style.navbar_loginRegister_icon}><FaUser/></span>
                                 <span className={style.navbar_loginRegister_text}>ثبت نام / ورود</span>
                             </Link>
+                            ):(
+                                <Link href='/Admin' className={style.navbar_loginRegister}>
+                                <span className={style.navbar_loginRegister_icon}><FaUser/></span>
+                                <span className={style.navbar_loginRegister_text}>حساب من</span>
+                            </Link>
+                            )}
+                            </div>
                 </div>
             </div>
         </section>
