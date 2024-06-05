@@ -48,6 +48,26 @@
     color: var(--textHover);
 }
 
+.basket_empty{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.basket_empty_text{
+    display: block;
+    font-family: var(--font-black);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--textHover);
+}
+.basket_empty_link{
+    display: block;
+    color: var(--textColor);
+    transition: all 0.4s ease-out;
+}
+.basket_empty_link:hover{
+    color: var(--textHover);
+}
 .basket_items{
     display: block;
     width: 100%;

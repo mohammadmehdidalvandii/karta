@@ -30,7 +30,7 @@ function LoginRegister() {
                     {changeMenu === "Login" &&( 
                         <Login/>
                     )}
-
+        
                     {changeMenu === 'Register' && (
                           <Register/>
                     )}

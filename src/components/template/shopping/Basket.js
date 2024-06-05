@@ -1,7 +1,15 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 import style from './Basket.module.css';
+import Link from 'next/link';
 
 function Basket() {
+    const [cart ,setCart] = useState([]);
+
+    // useEffect(()=>{
+    //     const localCart = JSON.parse(localStorage.getItem("cart")|| []);
+    //     setCart(localCart)
+    // },[])
   return (
     <section className={style.basket}>
         <div className="container">
@@ -28,31 +36,35 @@ function Basket() {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className={style.basket_wrapper}>
+                        {cart.length >= 0 && (
+                                <div className={style.basket_empty}>
+                                    <h5 className={style.basket_empty_text}>سبد خرید خالی است </h5>
+                                    <Link href='/' className={style.basket_empty_link}>محصولات</Link>
+                                </div>
+)}
+                        {/* {cart.map((item)=>(
                         <ul className={style.basket_items}>
                             <ul className={style.basket_item}>
                                 <span className={style.basket_item_title}>
                                 <img src="/images/itunes.jpg" alt="product img" className={style.basket_item_img} />
                                 </span>
-                                <span className={style.basket_item_text}>گیفت کارت 20 دلاری Itunes</span>
-                            </ul>
-                            <ul className={style.basket_item}>
-                                <span className={style.basket_item_title}>تعداد:</span>
-                                <span className={style.basket_item_text}>483,424,4</span>
+                                <span className={style.basket_item_text}>{item.name} - {item.price} دلاری</span>
                             </ul>
                             <ul className={style.basket_item}>
                                 <span className={style.basket_item_title}>جمع کل:</span>
-                                <span className={style.basket_item_text}>483,424,4</span>
+                                <span className={style.basket_item_text}>{item.price} دلار</span>
                             </ul>
                             <ul className={style.basket_item}>
                                 <span className={style.basket_item_title}>تخفیف:</span>
-                                <span className={style.basket_item_text}>483,424,4</span>
+                                <span className={style.basket_item_text}></span>
                             </ul>
                             <ul className={style.basket_item}>
                                 <span className={style.basket_item_title}>قابل پرداخت:</span>
-                                <span className={style.basket_item_text}>483,424,4</span>
+                                <span className={style.basket_item_text}>{(item.price*59000).toLocaleString()} تومان</span>
                             </ul>
                         </ul>
                         <button className={style.basket_pay}>پرداخت</button>
+                        ))} */}
                     </div>
                 </div>
             </div>
