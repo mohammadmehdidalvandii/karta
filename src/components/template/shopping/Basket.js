@@ -36,35 +36,40 @@ function Basket() {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className={style.basket_wrapper}>
-                        {cart.length >= 0 && (
+                        {/* {cart.length == [] && (
                                 <div className={style.basket_empty}>
                                     <h5 className={style.basket_empty_text}>سبد خرید خالی است </h5>
                                     <Link href='/' className={style.basket_empty_link}>محصولات</Link>
                                 </div>
-)}
-                        {/* {cart.map((item)=>(
+                        )} */}
                         <ul className={style.basket_items}>
-                            <ul className={style.basket_item}>
-                                <span className={style.basket_item_title}>
+                            <li className={style.basket_item}>
                                 <img src="/images/itunes.jpg" alt="product img" className={style.basket_item_img} />
-                                </span>
-                                <span className={style.basket_item_text}>{item.name} - {item.price} دلاری</span>
-                            </ul>
-                            <ul className={style.basket_item}>
-                                <span className={style.basket_item_title}>جمع کل:</span>
-                                <span className={style.basket_item_text}>{item.price} دلار</span>
-                            </ul>
-                            <ul className={style.basket_item}>
-                                <span className={style.basket_item_title}>تخفیف:</span>
-                                <span className={style.basket_item_text}></span>
-                            </ul>
-                            <ul className={style.basket_item}>
-                                <span className={style.basket_item_title}>قابل پرداخت:</span>
-                                <span className={style.basket_item_text}>{(item.price*59000).toLocaleString()} تومان</span>
-                            </ul>
+                            </li>
+                            <li className={style.basket_item}>
+                                <span className={style.basket_item_title}>گیفت کارت itunes</span>
+                            </li>
+                            <li className={style.basket_item}>
+                                <button className={style.basket_item_btn}>حذف</button>
+                            </li>
                         </ul>
-                        <button className={style.basket_pay}>پرداخت</button>
-                        ))} */}
+                        <ul className={style.basket_items}>
+                            <li className={style.basket_item}>
+                                <span className={style.basket_item_txt}>جمع کل</span>
+                            </li>
+                            <li className={style.basket_item}>
+                                <span className={style.basket_item_text}>دلار - 100</span>
+                            </li>
+                        </ul>
+                        <ul className={style.basket_items}>
+                            <li className={style.basket_item}>
+                                <span className={style.basket_item_txt}>قابل پرداخت</span>
+                            </li>
+                            <li className={style.basket_item}>
+                                <span className={style.basket_item_text}>5,900,000 - تومان</span>
+                            </li>
+                        </ul>
+                            <button className={style.basket_pay}>پرداخت</button>
                     </div>
                 </div>
             </div>

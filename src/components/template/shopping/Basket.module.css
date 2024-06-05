@@ -69,55 +69,85 @@
     color: var(--textHover);
 }
 .basket_items{
-    display: block;
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 .basket_item{
     display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-.basket_item_img{   
-    margin: 0 auto;
-    max-width: 70px;
-    border-radius: 1rem;
-}
-
-.basket_item_title{
-    display: inline-block;
-    text-align: center;
-    margin-left: 0.3rem;
-    width: 30%;
-    padding: 0.8rem;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 1rem;
+    width: 180px;
+    height: 4rem;
+    padding: 0.5rem;    
     background-color: var(--success);
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+}
+.basket_item:first-child{
+    margin-left: 1rem;
+}
+.basket_item_img{
+    width: 120px;
+    height: 50px;
+}
+.basket_item_title{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--textColor);
+}
+.basket_item_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    color: var(--whiteColor);
+    background-color: red;
+    border-radius: 0.4rem;
+    transition: all 0.4s ease;
+}
+.basket_item_btn:hover{
+    opacity: 0.7;
+}
+.basket_item:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+     height: 4rem;
+     padding: 0.5rem;    
+     background-color: var(--success);
+}
+.basket_item_txt{
+    display: block;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 .basket_item_text{
     display: block;
-    text-align: center;
-    width: 100%;
-    padding: 0.8rem;
-    background-color: var(--success);
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
 }
+
 .basket_pay{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
-    font-family: var(--font-bold);
-    font-size: 1.1rem;
+    width: 100%;
+    height: 2.5rem;
     outline: none;
     border: none;
-    border-radius: 0.6rem;
-    width: 120px;
-    height: 2.5rem;
+    border-radius: 0.5rem;
     background-color: var(--textHover);
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--textColor);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-out;
 }
 .basket_pay:hover{
     background-color: var(--textColor);
