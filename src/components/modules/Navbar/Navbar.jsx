@@ -11,7 +11,19 @@ function Navbar({isLogin}) {
     const [showMenu , setShowMenu] = useState(false);
     const [routeMenu , setRouteMenu] =useState("/");
     const [navToTop , setNavToTop] = useState(false)
+    const [countProduct , setCountProduct] = useState(0);
     const routePath = usePathname();
+
+    console.log("countProduct" , countProduct)
+
+    useEffect(()=>{
+        const productCount = JSON.parse(localStorage.getItem("cart"))
+        if(productCount){
+            setCountProduct(+1)
+        } else(
+            setCountProduct(0)
+        )
+    },[countProduct])
 
     // show-menu 
     const handlerShowMenu = ()=>{
@@ -61,7 +73,7 @@ function Navbar({isLogin}) {
 
                             <div className={style.navbar_basket_loginRegister}>
                             <Link href='/Shopping' className={style.navbar_basket}>
-                                        <span className={style.navbar_basket_number}>0</span>
+                                        <span className={style.navbar_basket_number}>{countProduct}</span>
                                         <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
                                 </Link>
                             { !isLogin ?(
@@ -112,7 +124,7 @@ function Navbar({isLogin}) {
                  
                        <div className={style.navbar_basket_loginRegister}>
                        <Link href='/Shopping' className={style.navbar_basket}>
-                                        <span className={style.navbar_basket_number}>0</span>
+                                        <span className={style.navbar_basket_number}>{countProduct}</span>
                                         <span className={style.navbar_basket_icon}><FaBasketShopping/></span>
                                 </Link>
                             { !isLogin ?(
