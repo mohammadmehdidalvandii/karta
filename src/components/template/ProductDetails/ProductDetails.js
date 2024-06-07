@@ -41,6 +41,7 @@ function ProductDetails({products}) {
             {products.map(product =>(
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <ProductCard name={product.name} price={product.price}
+                    key={product._id}
                     addToBasket={()=> handlerAddToBasket(product)}
                     />
                 </div>

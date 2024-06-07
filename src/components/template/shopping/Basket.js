@@ -55,7 +55,7 @@ function Basket() {
                                 </div>
                         )}
                         {cart.map(item=>(
-                            <ul className={style.basket_items}>
+                            <ul className={style.basket_items} key={item._id}>
                             <h4 className={style.basket_alert}>تمام مبالغ به صورت اتوماتیک به تومان تبدیل میشود</h4>
                             <li className={style.basket_item}>
                                 <img src="/images/itunes.jpg" alt="product img" className={style.basket_item_img} />
