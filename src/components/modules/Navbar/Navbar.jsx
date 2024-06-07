@@ -19,11 +19,11 @@ function Navbar({isLogin}) {
     useEffect(()=>{
         const productCount = JSON.parse(localStorage.getItem("cart"))
         if(productCount){
-            setCountProduct(+1)
+            setCountProduct(productCount.length)
         } else(
             setCountProduct(0)
         )
-    },[countProduct])
+    },[])
 
     // show-menu 
     const handlerShowMenu = ()=>{
