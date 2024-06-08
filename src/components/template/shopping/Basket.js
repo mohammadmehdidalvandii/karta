@@ -1,8 +1,7 @@
 "use client"
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './Basket.module.css';
 import Link from 'next/link';
-import { set } from 'mongoose';
 import { showSwal } from '@/utils/helpers';
 
 function Basket() {
