@@ -3,10 +3,18 @@ import React, { useEffect, useMemo, useState } from 'react';
 import style from './Basket.module.css';
 import Link from 'next/link';
 import { set } from 'mongoose';
+import { showSwal } from '@/utils/helpers';
 
 function Basket() {
     const [cart ,setCart] = useState([]);
     const [totalPrice ,  setTotalPrice] = useState(0);
+
+    const handlerRemoveProduct = (productID)=>{
+        let newBasket = cart.filter((item)=> item._id !== productID)
+        setCart(newBasket);
+        localStorage.setItem("cart", JSON.stringify(newBasket));
+        showSwal("محصول مورد نظر از سبد خرید حذف گردید.","success","فهمیدم")
+    }
 
     useEffect(()=>{
         const localCart = JSON.parse(localStorage.getItem("cart"));
@@ -64,7 +72,7 @@ function Basket() {
                                 <span className={style.basket_item_title}>{item.name} - {item.price} دلاری</span>
                             </li>
                             <li className={style.basket_item}>
-                                <button className={style.basket_item_btn}>حذف</button>
+                                <button className={style.basket_item_btn} onClick={()=>handlerRemoveProduct(item._id)}>حذف</button>
                             </li>
                         </ul>
                         ))}
