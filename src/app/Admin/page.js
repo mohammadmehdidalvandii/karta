@@ -36,7 +36,7 @@ function page() {
               buttons:"فهمیدم"
             }).then((result)=>{
               router.replace("/")
-              router.refresh()
+              router.refresh( )
             })
           }
         }

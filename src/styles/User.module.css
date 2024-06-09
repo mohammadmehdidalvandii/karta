@@ -1,0 +1,49 @@
+.user{
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+}
+.user_wrapper{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 1rem 0;
+    border-radius: 0.6rem;
+}
+.user_items{
+    display: block;
+    width: 100%;
+}
+.user_item{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    
+}
+.user_item_menu{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    color: var(--textColor);
+    transition: all 0.4s ease-out;
+}
+.user_item_menu:hover{
+    color: var(--textHover);
+}
+.user_item_menu_active{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-family: var(--font-bold);
+    font-size: 1.1rem;
+    color: var(--textHover);
+}
