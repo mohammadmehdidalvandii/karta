@@ -13,14 +13,17 @@ function Dashboard() {
             </div>
         </div>
         <div className="row mt-5">
-            <div className={style.dashboard_info}>
+           <div className="col-12">
+           <div className={style.dashboard_info}>
                 <img src="/images/user.png" alt="user" className={style.dashboard_info_img} />
                 <h5 className={style.dashboard_info_user}>محمد محمدی</h5>
                 <span className={style.dashboard_info_role}>کاربر</span>
             </div>
+           </div>
         </div>
         <div className="row mt-5">
-            <div className={style.dashboard_items}>
+           <div className="col-12">
+           <div className={style.dashboard_items}>
                 <div className={style.dashboard_item}>
                     <div className={style.dashboard_item_content}>
                         <div className={style.dashboard_item_number}>12</div>
@@ -43,6 +46,7 @@ function Dashboard() {
                     <span className={style.dashboard_item_icon}><MdDiscount/></span>
                 </div>
             </div>
+           </div>
         </div>
     </section>
   )
