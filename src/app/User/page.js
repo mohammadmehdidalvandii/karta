@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import style from '../../styles/User.module.css';
+import Dashboard from '@/components/template/user/Dashboard';
 
 function page() {
     const [activeMenu , setActiveMenu] = useState("Dashboard");
@@ -32,7 +33,7 @@ function page() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-9 col-sm-12">
-                        {activeMenu === "Dashboard" && (<h1>Dashboard</h1>)}
+                        {activeMenu === "Dashboard" && (<Dashboard/>)}
                         {activeMenu === "Order" && (<h1>Order</h1>)}
                         {activeMenu === "info" && (<h1>info</h1>)}
                     </div>
