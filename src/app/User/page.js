@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import style from '../../styles/User.module.css';
 import Dashboard from '@/components/template/user/Dashboard';
 import Order from '@/components/template/user/Order';
+import Info from '@/components/template/user/info';
 
 function page() {
     const [activeMenu , setActiveMenu] = useState("Dashboard");
@@ -36,7 +37,7 @@ function page() {
                     <div className="col-lg-9 col-md-9 col-sm-12">
                         {activeMenu === "Dashboard" && (<Dashboard/>)}
                         {activeMenu === "Order" && (<Order/>)}
-                        {activeMenu === "info" && (<h1>info</h1>)}
+                        {activeMenu === "info" && (<Info/>)}
                     </div>
                 </div>
             </div>
