@@ -4,14 +4,47 @@ import style from '../../styles/User.module.css';
 import Dashboard from '@/components/template/user/Dashboard';
 import Order from '@/components/template/user/Order';
 import Info from '@/components/template/user/info';
+import swal from 'sweetalert';
+import { useRouter } from 'next/navigation';
+
 
 function page() {
+    const router = useRouter();
     const [activeMenu , setActiveMenu] = useState("Dashboard");
 
     // handler change Menu ;
     const handlerMenu = (menuID)=>{
         setActiveMenu(menuID);
     }
+
+    // logoutHandler 
+
+    const logoutHandler = ()=>{
+        swal(
+          {
+            title : "آیا از خروج اطمینان دارید؟",
+            icon:"warning",
+            buttons:["نه","آره",]
+          }
+        ).then(async(result)=>{
+          if(result){
+            const res = await fetch("/api/auth/signout",{
+              method: "POST",
+            });
+            if(res.status === 200){
+              swal({
+                title:"با موفقیت از اکاننت خارج شدید",
+                icon:"success",
+                buttons:"فهمیدم"
+              }).then((result)=>{
+                router.replace("/")
+                router.refresh( )
+              })
+            }
+          }
+        })
+      }
+
   return (
         <section className={style.user}>
             <div className="containers">
@@ -29,7 +62,7 @@ function page() {
                                     <button className={activeMenu === 'info' ? style.user_item_menu_active : style.user_item_menu}  onClick={()=>handlerMenu("info")}>اطلاعات</button>
                                 </li>
                                 <li className={style.user_item}>
-                                    <button className={style.user_item_menu}>خروج</button>
+                                    <button className={style.user_item_menu} onClick={logoutHandler}>خروج</button>
                                 </li>
                             </ul>
                         </div>
