@@ -11,7 +11,7 @@ async function page() {
   const categories = await CategoriesModel.find({});
   return (
     <>
-      <Navbar isLogin={user ? true :false}/>
+      <Navbar isLogin={user ? true :false} userRole={user?.role}/>
       <Banner/>
       <Product categories={JSON.parse(JSON.stringify(categories))} />
       <Footer/>

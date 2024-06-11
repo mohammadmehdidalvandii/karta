@@ -7,7 +7,7 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { usePathname } from 'next/navigation';
 
 
-function Navbar({isLogin}) {
+function Navbar({isLogin , userRole}) {
     const [showMenu , setShowMenu] = useState(false);
     const [routeMenu , setRouteMenu] =useState("/");
     const [navToTop , setNavToTop] = useState(false)
@@ -82,10 +82,17 @@ function Navbar({isLogin}) {
                                 <span className={style.navbar_loginRegister_text}>ثبت نام / ورود</span>
                             </Link>
                             ):(
-                                <Link href='/Admin' className={style.navbar_loginRegister}>
-                                <span className={style.navbar_loginRegister_icon}><FaUser/></span>
-                                <span className={style.navbar_loginRegister_text}>حساب من</span>
-                            </Link>
+                                userRole === "ADMIN" ?(
+                                    <Link href='/Admin' className={style.navbar_loginRegister}>
+                                    <span className={style.navbar_loginRegister_icon}><FaUser/></span>
+                                    <span className={style.navbar_loginRegister_text}>حساب من</span>
+                                </Link>
+                                ):(
+                                    <Link href='/User' className={style.navbar_loginRegister}>
+                                    <span className={style.navbar_loginRegister_icon}><FaUser/></span>
+                                    <span className={style.navbar_loginRegister_text}>حساب من</span>
+                                </Link> 
+                                )
                             )}
                             </div>
                     </div>
