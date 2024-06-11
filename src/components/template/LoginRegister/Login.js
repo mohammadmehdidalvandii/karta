@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import style from './Login.module.css';
 import { showSwal } from '@/utils/helpers';
 import { validationEmail, validationPassword } from '@/utils/auth';
-import { redirect } from 'next/dist/server/api-utils';
 import { useRouter } from 'next/navigation';
 import swal from 'sweetalert';
 
@@ -10,6 +9,7 @@ function Login() {
   const router = useRouter()
   const [email , setEmail ] = useState('');
   const [password , setPassword] = useState('');
+  const [role , setRole] = useState('')
 
   const signIn = async (event)=>{
     event.preventDefault();
@@ -39,12 +39,14 @@ function Login() {
 
     console.log("Response ---> " , res)
     if(res.status === 200){
+      const {user , role} = data;
+      setRole(role)
       swal({
         title: "با موفقیت لاگین شدین",
         icon: "success",
         buttons: "ورود به پنل کاربری",
       }).then(() => {
-        router.replace("Admin");
+        router.replace(role === "ADMIN" ? "Admin" : "User");
         router.refresh();
       });
     } else if(res.status === 422 || res.status === 401){

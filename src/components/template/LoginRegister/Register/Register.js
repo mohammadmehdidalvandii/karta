@@ -12,6 +12,7 @@ function Register() {
     const [phone , setPhone] = useState("");
     const [password , setPassword] = useState("");
     const [rePassword , setRePassword] = useState("");
+    const [role , setRole ] = useState("");
   
     const signUp = async (event)=>{
         event.preventDefault();
@@ -51,13 +52,18 @@ function Register() {
             body: JSON.stringify(user),
         });
 
+        const data = await res.json();
+
         if(res.status === 201){
+            const {user, role} = data;
+            setRole(role)
             swal({
                 title:"ثبت نام با موفقیت انجام شد",
                 icon:"success",
                 buttons:"ورود به پنل کاربری"
             }).then(()=>{
-                router.replace('Admin')
+                router.replace(role === "ADMIN" ? 'Admin' : 'User')
+                router.refresh()
             })
         } else if(res.status === 422){
             showSwal("کاربر با این اطلاعات از قبل وجود دارد","error","تلاش مجدد")
